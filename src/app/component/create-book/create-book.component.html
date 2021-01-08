@@ -1,12 +1,22 @@
 <h1>create book</h1>
 <hr>
+
+
 <form [formGroup]="newFormAdd" (ngSubmit)="create()">
-  <input type="text" formControlName="title"> title: <br>
-  <input type="text" formControlName="author"> author: <br>
-  <textarea type="text" formControlName="description"> description:</textarea><br>
-  <button class="btn-success" type="submit">create</button>
-  <button [routerLink]="['']">back to list</button>
+  <div class="form-group">
+    <label for="exampleInputEmail1">title</label>
+    <input formControlName="title" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter title">
+<!--    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+  </div>
+  <div class="form-group">
+    <label >Author</label>
+    <input formControlName="author" type="text" class="form-control" placeholder="Author">
+  </div>
+  <div class="form-group">
+    <label >description</label>
+    <input formControlName="description" type="text" class="form-control" placeholder="description">
+  </div>
+  <button type="submit" class="btn btn-primary">create</button>
+  <button  class="btn btn-danger" [routerLink]="['']">back to list</button>
 </form>
-
-
 

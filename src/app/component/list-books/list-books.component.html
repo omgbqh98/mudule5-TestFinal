@@ -1,14 +1,17 @@
 <h1>list Book</h1>
 <hr>
 <p>có {{listBook.length}} quyển sách</p>
-<table border="3px">
+<table class="table">
+  <thead>
   <tr>
-    <td>id</td>
-    <td>title</td>
-    <td>author</td>
-    <td>action</td>
+    <th scope="col">id</th>
+    <th scope="col">title</th>
+    <th scope="col">author</th>
+    <th scope="col">action</th>
 <!--    <td>delete</td>-->
   </tr>
+  </thead>
+  <tbody>
   <tr *ngFor="let book of listBook">
     <td>{{book.id}}</td>
     <td><a [routerLink]="['detail',book.id]">{{book.title}}</a></td>
@@ -18,6 +21,7 @@
       <button class="btn-danger" [routerLink]="['/delete', book.id]">delete</button>
     </td>
   </tr>
+  </tbody>
 </table>
 
 <button class="btn-dark" [routerLink]="['create']">create new</button>
