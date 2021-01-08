@@ -1,0 +1,11 @@
+<h1>update</h1>
+<hr>
+<form [formGroup]="newFormUpdate" (ngSubmit)="update()">
+  <input type="text" formControlName="title"> title: <br>
+  <input type="text" formControlName="author">author: <br>
+  <input type="text" formControlName="description">description: <br>
+  <button class=" btn-success" type="submit">update</button>
+</form>
+
+<button [routerLink]="['']">back to list</button>
+
